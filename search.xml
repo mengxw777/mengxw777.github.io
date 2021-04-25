@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Week7</title>
+      <link href="2021/04/25/Week%207/"/>
+      <url>2021/04/25/Week%207/</url>
+      
+        <content type="html"><![CDATA[<h2 id="153-寻找旋转排序数组中的最小值"><a href="#153-寻找旋转排序数组中的最小值" class="headerlink" title="153. 寻找旋转排序数组中的最小值"></a><a href="https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/">153. 寻找旋转排序数组中的最小值</a></h2><pre class="line-numbers language-[PHP]" data-language="[PHP]"><code class="language-[PHP]">class Solution&#123;    &#x2F;**     * @param  Integer[]  $nums     *     * @return Integer     *&#x2F;    function findMin(array $nums): int    &#123;        if (empty($nums)) &#123;            return -1;        &#125;        $l &#x3D; 0;        $r &#x3D; count($nums) - 1;        while ($l &lt; $r) &#123;            $mid &#x3D; $l + (($r - $l) &gt;&gt; 1);            if ($nums[$mid] &lt; $nums[$r]) &#123;                $r &#x3D; $mid;            &#125; else &#123;                $l &#x3D; $mid + 1;            &#125;        &#125;        return $nums[$l];    &#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="162-寻找峰值"><a href="#162-寻找峰值" class="headerlink" title="162. 寻找峰值"></a><a href="https://leetcode-cn.com/problems/find-peak-element/">162. 寻找峰值</a></h2><pre class="line-numbers language-none"><code class="language-none">class Solution&#123;    &#x2F;**     * @param  Integer[]  $nums     *     * @return Integer     *&#x2F;    function findPeakElement(array $nums): int    &#123;        if (empty($nums)) &#123;            return -1;        &#125;        $l &#x3D; 0;        $r &#x3D; count($nums) - 1;        while ($l &lt; $r) &#123;            $mid &#x3D; $l + (($r - $l) &gt;&gt; 1);            if ($nums[$mid] &gt; $nums[$mid + 1]) &#123;                $r &#x3D; $mid;            &#125; else &#123;                $l +&#x3D; 1;            &#125;        &#125;        return $l;    &#125;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 小争哥的算法打卡 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
